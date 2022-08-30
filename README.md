@@ -8,7 +8,7 @@ Because Microsoft doesn't have an option you can toggle to disable that, I have 
 
 ## For end-users
 
-You can download a ready-to-use build of this tool by clicking [here](# "here").
+You can download a ready-to-use build of this tool by clicking [here](https://github.com/Hevger/RawCopy-for-MSTeams/releases/tag/1.0.0 "here").
 
 ## For developers
 
