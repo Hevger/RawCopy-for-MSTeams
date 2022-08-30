@@ -1,0 +1,26 @@
+{
+  "name": "raw-copy-for-msteams",
+  "version": "1.0.0",
+  "description": "A tool that cleans the senders name and timestamp from clipboard when you copy text from the conversation in MSTeams.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win=portable"
+  },
+  "author": "Hevger Ibrahim",
+  "publisher": "Hevger Ibrahim",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^20.1.0",
+    "electron-builder": "^23.3.3"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "clipboard-event": "^1.6.0",
+    "electron-active-window": "^0.0.6"
+  },
+  "build": {
+    "productName": "RawCopy for MSTeams",
+    "appId": "rawcopy.msteams"
+  }
+}
