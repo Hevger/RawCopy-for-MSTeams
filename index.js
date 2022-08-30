@@ -74,7 +74,7 @@ app.once("ready", () => {
           let pattern = /\[(.*?)\].*/;
           var lines = clipboardData.split("\n");
           //   Check if format is teams format
-          if (pattern.test(lines[0])) {
+          if (lines.length > 1 && pattern.test(lines[0])) {
             // Delete the first line
             lines.splice(0, 1);
             var newtext = lines.join("\n");

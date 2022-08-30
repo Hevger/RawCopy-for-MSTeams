@@ -15,7 +15,7 @@ You can download a ready-to-use build of this tool by clicking [here](# "here").
 ##### This tool is made by ElectronJS.
 
 To get started install NPM packages:
-`npm install`
+`npm i --also=dev`
 
 Run
 `npm start`
