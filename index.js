@@ -67,23 +67,21 @@ app.once("ready", () => {
     activeWindows()
       .getActiveWindow()
       .then((result) => {
-        if (!result.windowClass === "Teams.exe") {
-          return;
+        if (result.windowClass === "Teams.exe") {
+          // Get clipboard
+          const clipboardData = clipboard.readText();
+          // Regex
+          let pattern = /\[(.*?)\].*/;
+          var lines = clipboardData.split("\n");
+          //   Check if format is teams format
+          if (pattern.test(lines[0])) {
+            // Delete the first line
+            lines.splice(0, 1);
+            var newtext = lines.join("\n");
+            clipboard.writeText(newtext);
+          }
         }
       });
-
-    // Get clipboard
-    const clipboardData = clipboard.readText();
-    // Regex
-    let pattern = /\[(.*?)\].*/;
-    var lines = clipboardData.split("\n");
-    //   Check if format is teams format
-    if (pattern.test(lines[0])) {
-      // Delete the first line
-      lines.splice(0, 1);
-      var newtext = lines.join("\n");
-      clipboard.writeText(newtext);
-    }
   });
 
   service.on("close", () => {
